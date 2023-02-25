@@ -20,7 +20,6 @@
 
 	<properties>
 		<bytebuddy.version>1.14.0</bytebuddy.version>
-		<!-- <hibernate.version>6.2.0.CR1</hibernate.version> -->
 		<java.version>17</java.version>
 	</properties>
 
