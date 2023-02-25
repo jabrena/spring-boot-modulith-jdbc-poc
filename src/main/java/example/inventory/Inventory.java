@@ -20,6 +20,7 @@ import lombok.RequiredArgsConstructor;
 
 import org.jmolecules.ddd.annotation.Service;
 import org.jmolecules.event.annotation.DomainEventHandler;
+//import org.springframework.stereotype.Service;
 
 /**
  * @author Oliver Drotbohm
