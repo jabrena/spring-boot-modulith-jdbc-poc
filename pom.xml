@@ -20,42 +20,21 @@
 
 	<properties>
 		<bytebuddy.version>1.14.0</bytebuddy.version>
-		<hibernate.version>6.2.0.CR1</hibernate.version>
+		<!-- <hibernate.version>6.2.0.CR1</hibernate.version> -->
 		<java.version>17</java.version>
 	</properties>
 
 	<dependencies>
 
+		<!-- TODO Review how to remove in the next iteration -->
 		<dependency>
 			<groupId>org.jmolecules</groupId>
 			<artifactId>jmolecules-ddd</artifactId>
 		</dependency>
 
 		<dependency>
-			<groupId>org.jmolecules</groupId>
-			<artifactId>jmolecules-events</artifactId>
-		</dependency>
-
-		<!--
-		<dependency>
-			<groupId>org.jmolecules.integrations</groupId>
-			<artifactId>jmolecules-jpa</artifactId>
-		</dependency>
-		-->
-
-		<dependency>
-			<groupId>org.jmolecules.integrations</groupId>
-			<artifactId>jmolecules-spring</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.experimental</groupId>
 			<artifactId>spring-modulith-starter-jdbc</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jmolecules.integrations</groupId>
-			<artifactId>jmolecules-bytebuddy-nodep</artifactId>
-			<scope>provided</scope>
 		</dependency>
 
 		<!-- Persistence -->
@@ -99,6 +78,23 @@
 			<optional>true</optional>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.experimental</groupId>
+			<artifactId>spring-modulith-actuator</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<dependencyManagement>
@@ -119,36 +115,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
-	<profiles>
-		<profile>
-
-			<id>actuator</id>
-
-			<dependencies>
-
-				<!-- Actuator -->
-		
-				<dependency>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-actuator</artifactId>
-					<scope>runtime</scope>
-				</dependency>
-
-				<dependency>
-					<groupId>org.springframework.experimental</groupId>
-					<artifactId>spring-modulith-actuator</artifactId>
-					<scope>runtime</scope>
-				</dependency>
-
-				<dependency>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-web</artifactId>
-				</dependency>
-
-			</dependencies>
-		</profile>
-	</profiles>
 
 	<build>
 

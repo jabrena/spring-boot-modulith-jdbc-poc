@@ -16,10 +16,9 @@
 package example.order;
 
 import example.customer.Customer.CustomerIdentifier;
-//import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 
-import org.jmolecules.ddd.annotation.Service;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**

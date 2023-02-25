@@ -17,6 +17,8 @@ package example.inventory;
 
 import org.jmolecules.ddd.annotation.Repository;
 
+//import org.springframework.stereotype.Repository;
+
 /**
  * @author Oliver Drotbohm
  */
